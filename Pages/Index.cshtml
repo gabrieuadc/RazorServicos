@@ -1,8 +1,11 @@
 @page
 @model razorApp.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Index";
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,13 +26,13 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Serviços/Despesas
+                            Serviços
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="~/cadService">Serviços</a></li>
-                            <li><a class="dropdown-item" href="#">Despesas</a></li>
+                            <li><a class="dropdown-item" href="~/formService"href="~/cadService">Serviços- Cadastro</a></li>
+                            <li><a class="dropdown-item" href="~/cadService">Serviços- Relação</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Relatório de acompanhamento</a></li>
+                            <li><a class="dropdown-item" href="~/analiseService">Relatório de acompanhamento</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -39,30 +42,35 @@
 </header>
 <body>
 </br>
-<h3>Bem vindo ao melhor app de gestão de serviços</h3>
+<h3 style="margin-left:5%;">Bem vindo ao melhor app de gestão de serviços</h3>
 </br>
 
 
-<div style="display:flex;margin-left: 20%;">
+<div style="margin-left:5%;display:flex;">
 <form>
     <div class="form-group" >
         <label for="exampleInputEmail1"  >User</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o email." name="email">
+        <input style="display:flex;" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o email." name="email">
 <!--        <small id="emailHelp" class="form-text text-muted">Nome completo.</small>-->
     </div>
     </br>
     <div class="form-group">
-        <labe>Password</labe>
-        <input type="password" class="form-control" placeholder="Insira a senha." name="password">
+        <label>Password</label>
+        <input tyle="display:flex;" type="password" class="form-control" placeholder="Insira a senha." name="password">
     </div>
     </br>
 <!--    <div class="form-check">-->
 <!--        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
 <!--        <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
 <!--    </div>-->
-    <button type="submit" class="btn btn-primary">Gravar</button>
+    <button type="submit" class="btn btn-primary">Login</button>
 </form>
+<br><br><br><br><br>
 </div>
+<div style="margin-top: 5%">
+<img src="~/Assets/FarQGLEaQAAD_Hm.jpeg" height="500px">
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

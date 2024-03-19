@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace razorApp.Pages;
@@ -5,12 +6,16 @@ namespace razorApp.Pages;
 {
     private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    private readonly HttpClient _httpClient;
+
+    public IndexModel(ILogger<IndexModel> logger, HttpClient httpClient)
     {
         _logger = logger;
+        _httpClient = httpClient;
     }
 
-    public void OnGet()
+    public void  OnGet()
     {
+
     }
 }
